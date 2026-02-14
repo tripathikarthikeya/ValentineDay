@@ -24,7 +24,7 @@ You can view the live version of this project here:
 
 🔗 **Live Demo:**  
 ```
-https://dating-profile-prince.vercel.app/
+https://dating-profile-kartikey.vercel.app/
 ```
 
 ---
@@ -43,7 +43,7 @@ project-folder
     ├── photo2.jpg
     ├── photo3.jpg
     ├── photo4.jpg
-    └── video.mp4
+    
 ```
 
 ---
