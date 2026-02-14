@@ -184,6 +184,27 @@ const tracks = [
   { name: "🌸", src: "src/Hafte4.mp3" }
 ];
 
+const unlock = document.getElementById("audioUnlock");
+
+unlock.addEventListener("click", () => {
+  audio.muted = false;
+  audio.volume = 0;
+
+  audio.play().then(() => {
+    vinyl.classList.add("playing");
+    vinyl.classList.remove("paused");
+
+    unlock.remove(); // remove overlay
+
+    // smooth fade-in
+    let fade = setInterval(() => {
+      if (audio.volume < 0.6) audio.volume += 0.02;
+      else clearInterval(fade);
+    }, 150);
+  });
+}, { once: true });
+
+
 let currentTrack = 0;
 
 /* Load Track */
@@ -299,3 +320,4 @@ function handleYes() {
     }
   }, 200);
 }
+
